@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/lin_lay"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:paddingTop="100dp"
+    android:background="#333333">
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/xlarge"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:text="Vehicle on its way" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="230dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="@drawable/hexagon"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/hexText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:paddingTop="60dp"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:text="ESTIMATED" />
+        <TextView
+            android:id="@+id/hexText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:text="WAITING TIME" />
+        <TextView
+        android:id="@+id/hexText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/xlarge"
+        android:textAlignment="center"
+        android:text="12 MIN" />
+        <TextView
+            android:id="@+id/hexText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:text="ESTIMATED ARRIVAL TIME" />
+        <TextView
+            android:id="@+id/hexText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/large"
+            android:textAlignment="center"
+            android:text="13:47 PM" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Back to Map"
+        android:background="@drawable/btn_primary"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:onClick="goback" />
+
+</LinearLayout>

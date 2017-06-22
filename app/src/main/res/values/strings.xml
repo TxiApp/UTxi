@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TxiApp</string>
+    <string name="splashscreen_text">BOOK A LEGITIMATE TAXI CAB TRANSPORTATION</string>
+    <string name="login_edittext1">Email or Phone Number</string>
+    <string name="login_edittext2">Password</string>
+    <string name="login_bttext">Login</string>
+    <string name="login_text1">Don\'t have an Account?</string>
+    <string name="login_text2">Sign Up</string>
+    <string name="signup_text1">Create\n Your Account</string>
+    <string name="signup_text2">Full Name</string>
+    <string name="signup_text3">Email Address</string>
+    <string name="signup_text4">Mobile Phone</string>
+    <string name="signup_text5">Password</string>
+    <string name="signup_text6">Confirm Password</string>
+    <string name="signup_text7">Next</string>
+    <string name="signup2_text1">Payment</string>
+    <string name="signup2_text2">or</string>
+    <string name="signup2_text3">CreditCard/DebitCard Number</string>
+    <string name="signup2_text4">Name on Card</string>
+    <string name="signup2_text5">Security Code</string>
+    <string name="signup2_text6">MM/YY</string>
+    <string name="signup2_text7">By Clicking SUBMIT button, you are agreeing to the</string>
+    <string name="signup2_text8"><u>Terms and Conditions</u></string>
+    <string name="signup2_text9">of this mobile app and company services</string>
+    <string name="signup2_text10">Submit</string>
+    <string name="home_text1">TXI</string>
+    <string name="home_text2">BLK</string>
+    <string name="home_text3">BY</string>
+</resources>
