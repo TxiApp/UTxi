@@ -29,14 +29,14 @@ import java.util.List;
 import java.util.Map;
 
 import static android.content.Context.MODE_PRIVATE;
+import static tk.urbantaxi.utxi.classes.Constants.SHARED_PREFERENCE;
+import static tk.urbantaxi.utxi.classes.Constants.URL;
 
 /**
  * Created by steph on 6/15/2017.
  */
 
 public class Requestor {
-    private final static String URL = "http://urbantaxi.tk/mbl/";
-    public final static String SHARED_PREFERENCE = "TaxiAppSharedPreference";
 
     private String url;
     private Boolean isRunning = false;
@@ -136,6 +136,7 @@ public class Requestor {
                 connection.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
                 connection.setDoOutput(true);
                 connection.getOutputStream().write(postDataBytes);
+                connection.setConnectTimeout(30000);
                 connection.connect();
                 InputStream stream = connection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(stream));
