@@ -33,9 +33,9 @@ import java.util.Map;
 import tk.urbantaxi.utxi.classes.Requestor;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+import static tk.urbantaxi.utxi.classes.Constants.SHARED_PREFERENCE;
+
 public class Login extends AppCompatActivity implements View.OnClickListener {
-    public final static String URL = "http://urbantaxi.tk/mbl/login";
-    public final static String SHARED_PREFERENCE = "TaxiAppSharedPreference";
 
     private ProgressDialog dialog;
     private EditText etUsername;
