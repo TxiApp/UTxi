@@ -52,13 +52,13 @@
             android:name=".SignupPaypal"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCggZ7UemiSRfZSZ0W8IFfcsjdjM4p8XaY" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCggZ7UemiSRfZSZ0W8IFfcsjdjM4p8XaY"/>
         <activity
             android:name=".Driver"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -69,6 +69,12 @@
             android:name=".classes.Firebase">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".classes.MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
     </application>

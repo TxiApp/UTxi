@@ -14,6 +14,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import com.google.firebase.FirebaseApp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +44,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnSubmit;
+    private TextView signup;
     private Requestor requestor;
     private Map<String, Object> param;
 
@@ -61,8 +65,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
+        signup = (TextView) findViewById(R.id.signUpText);
 
         btnSubmit.setOnClickListener(this);
+        signup.setOnClickListener(this);
 
         param = new LinkedHashMap<>();
         requestor = new Requestor("login", param, this){
@@ -110,11 +116,19 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        String username = etUsername.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
-        param.put("username", username);
-        param.put("password", password);
-        requestor.execute();
+        switch(v.getId()){
+            case R.id.btnSubmit:
+                String username = etUsername.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
+                param.put("username", username);
+                param.put("password", password);
+                requestor.execute();
+                break;
+            case R.id.signUpText:
+                Intent intent2 = new Intent(getApplicationContext(),Signup.class);
+                startActivity(intent2);
+                break;
+        }
     }
 
 }

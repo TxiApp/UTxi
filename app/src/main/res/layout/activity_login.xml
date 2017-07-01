@@ -78,7 +78,7 @@
         android:textAlignment="center"
         android:text="@string/login_text1" />
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/signUpText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.10"

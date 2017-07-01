@@ -15,6 +15,7 @@ public class Firebase extends FirebaseInstanceIdService {
     @Override
     public void onTokenRefresh() {
         // Get updated InstanceID token.
+        Log.e("TEST", "TEST");
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         Log.e("Google", "Refreshed Token: " + refreshedToken);
         // If you want to send messages to this application instance or
