@@ -28,8 +28,16 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services-maps:11.0.1'
     compile 'com.google.android.gms:play-services-location:11.0.1'
+    compile 'com.google.android.gms:play-services-places:11.0.1'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
     compile 'com.google.firebase:firebase-core:11.0.1'
     compile 'com.google.firebase:firebase-messaging:11.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.akexorcist:googledirectionlibrary:1.0.4'
+    compile 'com.google.maps:google-maps-services:0.1.6'
+    compile 'org.slf4j:slf4j-nop:1.7.25'
     testCompile 'junit:junit:4.12'
 }
+
+
+apply plugin: 'com.google.gms.google-services'

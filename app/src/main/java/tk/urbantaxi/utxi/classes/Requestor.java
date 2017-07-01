@@ -11,6 +11,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -80,6 +82,7 @@ public class Requestor {
             }
             param.put("macaddress", macAddress);
             param.put("type", "user");
+            param.put("fcmtoken", FirebaseInstanceId.getInstance().getToken());
             if (isRunning == true && asynchronus == true) {
                 new Ajaxer().execute();
             }else{
@@ -91,7 +94,7 @@ public class Requestor {
     }
 
     public void onNetworkError(){
-        Toast.makeText(context, "Something went wrong.", Toast.LENGTH_LONG);
+        Toast.makeText(context, "Something went wrong.", Toast.LENGTH_LONG).show();
     }
 
     public void preExecute(){
@@ -148,7 +151,7 @@ public class Requestor {
                 String finalJson = buffer.toString().trim();
                 return finalJson;
             } catch (MalformedURLException e) {
-                e.printStackTrace();
+                cancel(true);
             } catch (IOException e) {
 
                 cancel(true);
@@ -161,7 +164,7 @@ public class Requestor {
                         reader.close();
                     }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    cancel(true);
                 }
             }
             return null;
@@ -236,5 +239,13 @@ public class Requestor {
 
     public void setPage(Integer page){
         this.PAGE = page;
+    }
+
+    public void setParam(Map<String, Object> params){
+        this.param = params;
+    }
+
+    public void setAsynchronus(Boolean bool){
+        this.asynchronus = bool;
     }
 }

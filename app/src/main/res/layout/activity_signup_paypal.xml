@@ -119,7 +119,7 @@
         android:textColor="@color/orange"
         android:textSize="@dimen/small" />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSubmit"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -128,27 +128,21 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/orange"
         android:textSize="@dimen/medium"
-        android:onClick="gotologin"
         android:layout_weight="0.01" />
 
-    <RadioGroup
-        android:id="@+id/page_group"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/page1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RadioButton
-            android:id="@+id/page2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"  />
-
-    </RadioGroup>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hexagon_gray"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hexagon_white"/>
+    </LinearLayout>
 </LinearLayout>

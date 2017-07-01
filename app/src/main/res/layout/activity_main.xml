@@ -22,7 +22,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
             <ImageView
-                android:padding="5dp"
+                android:padding="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_setup"/>
@@ -36,7 +36,7 @@
                 android:textColor="@color/white"
                 android:textSize="22dp" />
             <ImageView
-                android:padding="7dp"
+                android:padding="9dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_menu"/>
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.4"
+            android:layout_weight="0.6"
             android:text="John Doe"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -55,7 +55,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.9"
+        android:layout_weight="0.85"
         android:orientation="vertical">
         <fragment
             android:id="@+id/mapFragment"
@@ -74,7 +74,7 @@
         android:weightSum="1">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnTaxi"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
