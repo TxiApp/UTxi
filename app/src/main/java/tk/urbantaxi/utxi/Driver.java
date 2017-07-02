@@ -205,7 +205,8 @@ public class Driver extends AppCompatActivity implements View.OnClickListener {
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if(requestId == Integer.valueOf(intent.getStringExtra("id"))){
+            Integer id = Integer.valueOf(intent.getStringExtra("id"));
+            if(requestId.equals(id)){
                 Log.e("BROADCAST", intent.getStringExtra("id"));
                 switch (intent.getStringExtra("action")){
                     case "reject":
