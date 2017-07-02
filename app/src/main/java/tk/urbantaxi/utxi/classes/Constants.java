@@ -9,4 +9,5 @@ public class Constants {
     public final static String SHARED_PREFERENCE = "UTaxiAppSharedPreference";
     public final static String USER_PROFILES = "http://urbantaxi.tk/user_profiles/";
     public final static String VEHICLE_URL = "http://urbantaxi.tk/vehicle_images/";
+    public final static String ROAD_API_KEY = "AIzaSyDl9XiGrgJuBslnkAByb9J-lnDkm_OmsBc";
 }

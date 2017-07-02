@@ -72,6 +72,7 @@ import tk.urbantaxi.utxi.classes.Requestor;
 import tk.urbantaxi.utxi.models.DriverLocations;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+import static tk.urbantaxi.utxi.classes.Constants.ROAD_API_KEY;
 import static tk.urbantaxi.utxi.classes.Constants.USER_PROFILES;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, View.OnClickListener {
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mContext = new GeoApiContext().setApiKey("AIzaSyAjs-eNCJSmrEX5W0i1-jv9dklO_KUby5A");
+        mContext = new GeoApiContext().setApiKey(ROAD_API_KEY);
 
         Map<String, Object> param = new LinkedHashMap<>();
         requestor = new Requestor("getnearbytaxis", param, this){
